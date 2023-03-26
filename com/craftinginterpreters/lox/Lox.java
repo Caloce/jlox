@@ -50,11 +50,14 @@ public class Lox {
     private static void run(String source) {
         Scanner scanner = new Scanner(source);
         List<Token> tokens = scanner.scanTokens();
+        Parser parser = new Parser(tokens);
+        Expr expression = parser.parse();
 
-        // "for now just print the tokens."
-        for (Token token: tokens) {
-            System.out.println(token);
-        }
+        // Stop if there was a syntax error.
+        if (hadError) return;
+
+        // for now, just returns to us the parsed syntax.
+        System.out.println(new AstPrinter().print(expression));
     }
 
     // The book says this part tells us which line errors occurred on.
@@ -69,4 +72,13 @@ public class Lox {
         hadError = true;
     }
 
+    // Reports an error token by showing the token's location and what it is.
+    static void error(Token token, String message) {
+        // Unless it's the EOF token, then say that it's at end.
+        if (token.type ==TokenType.EOF) {
+            report(token.line, " at end", message);
+        } else {
+            report(token.line, " at '" + token.lexeme + "'", message);
+        }
+    }
 }
