@@ -1,0 +1,168 @@
+; Aborting connect, error determining connect sequence.
+"Hello World"
+clj꞉welcome-to-clojure꞉> 
+nil
+clj꞉welcome-to-clojure꞉> 
+nil
+clj꞉welcome-to-clojure꞉> 
+nil
+clj꞉welcome-to-clojure꞉> 
+#'welcome-to-clojure/last-eval-wins
+clj꞉welcome-to-clojure꞉> 
+side-effect-1
+side-effect-2
+2
+clj꞉welcome-to-clojure꞉> 
+prints-this-evaluates-to-nil
+nil
+clj꞉welcome-to-clojure꞉> 
+#'welcome-to-clojure/foo
+clj꞉welcome-to-clojure꞉> 
+([1 :a] [1 :b] [2 :a] [2 :b] [3 :a] [3 :b])
+clj꞉welcome-to-clojure꞉> 
+"123"
+clj꞉welcome-to-clojure꞉> 
+(":foo" ":bar")
+clj꞉welcome-to-clojure꞉> 
+; Syntax error compiling at (c:\Users\Fohr\AppData\Local\Temp\betterthantomorrow.calva\94svjo\welcome_to_clojure.clj:126:3).
+; Can't take value of a macro: #'clojure.core/for
+clj꞉welcome-to-clojure꞉> 
+; Syntax error compiling at (c:\Users\Fohr\AppData\Local\Temp\betterthantomorrow.calva\94svjo\welcome_to_clojure.clj:127:3).
+; Unable to resolve symbol: def in this context
+clj꞉welcome-to-clojure꞉> 
+(":foo" ":bar")
+clj꞉welcome-to-clojure꞉> 
+18
+clj꞉welcome-to-clojure꞉> 
+-1.8
+clj꞉welcome-to-clojure꞉> 
+18.0
+clj꞉welcome-to-clojure꞉> 
+18.0M
+clj꞉welcome-to-clojure꞉> 
+1/18
+clj꞉welcome-to-clojure꞉> 
+18N
+clj꞉welcome-to-clojure꞉> 
+18
+clj꞉welcome-to-clojure꞉> 
+18
+clj꞉welcome-to-clojure꞉> 
+18
+clj꞉welcome-to-clojure꞉> 
+"hello"
+clj꞉welcome-to-clojure꞉> 
+#"[0-9]+"
+clj꞉welcome-to-clojure꞉> 
+\e
+clj꞉welcome-to-clojure꞉> 
+#function[clojure.core/map]
+clj꞉welcome-to-clojure꞉> 
+#function[clojure.core/+]
+clj꞉welcome-to-clojure꞉> 
+#function[clojure.core/+]
+clj꞉welcome-to-clojure꞉> 
+nil
+clj꞉welcome-to-clojure꞉> 
+false
+clj꞉welcome-to-clojure꞉> 
+:alpha
+clj꞉welcome-to-clojure꞉> 
+:release/alpha
+clj꞉welcome-to-clojure꞉> 
+:welcome-to-clojure/alpha
+clj꞉welcome-to-clojure꞉> 
+true
+clj꞉welcome-to-clojure꞉> 
+true
+clj꞉welcome-to-clojure꞉> 
+true
+clj꞉welcome-to-clojure꞉> 
+"Write strings\nlike this, if leading spaces are no-no."
+clj꞉welcome-to-clojure꞉> 
+"A string can be\n   multi-line, but will contain any leading spaces."
+clj꞉welcome-to-clojure꞉> 
+#'welcome-to-clojure/foo-2
+clj꞉welcome-to-clojure꞉> 
+; Syntax error compiling at (c:\Users\Fohr\AppData\Local\Temp\betterthantomorrow.calva\94svjo\welcome_to_clojure.clj:0:0).
+; Unable to resolve symbol: foo-3 in this context
+clj꞉welcome-to-clojure꞉> 
+; Syntax error compiling at (c:\Users\Fohr\AppData\Local\Temp\betterthantomorrow.calva\94svjo\welcome_to_clojure.clj:0:0).
+; No such namespace: some-namespace
+clj꞉welcome-to-clojure꞉> 
+#function[hello-repl/greet]
+clj꞉welcome-to-clojure꞉> 
+"Hello from the welcome-to-clojure namespace!"
+clj꞉welcome-to-clojure꞉> 
+nil
+clj꞉welcome-to-clojure꞉> 
+"Strictly yours, World!"
+clj꞉welcome-to-clojure꞉> 
+; Syntax error compiling at (c:\Users\Fohr\AppData\Local\Temp\betterthantomorrow.calva\94svjo\welcome_to_clojure.clj:279:3).
+; Unable to resolve symbol: doc in this context
+clj꞉welcome-to-clojure꞉> 
+; Syntax error compiling at (c:\Users\Fohr\AppData\Local\Temp\betterthantomorrow.calva\94svjo\welcome_to_clojure.clj:280:3).
+; No such namespace: string
+clj꞉welcome-to-clojure꞉> 
+; Syntax error compiling at (c:\Users\Fohr\AppData\Local\Temp\betterthantomorrow.calva\94svjo\welcome_to_clojure.clj:279:3).
+; Unable to resolve symbol: doc in this context
+clj꞉welcome-to-clojure꞉> 
+; Syntax error compiling at (c:\Users\Fohr\AppData\Local\Temp\betterthantomorrow.calva\94svjo\welcome_to_clojure.clj:279:3).
+; Unable to resolve symbol: doc in this context
+clj꞉welcome-to-clojure꞉> 
+; Syntax error compiling at (c:\Users\Fohr\AppData\Local\Temp\betterthantomorrow.calva\94svjo\welcome_to_clojure.clj:280:3).
+; No such namespace: string
+clj꞉welcome-to-clojure꞉> 
+nil
+clj꞉hello-repl꞉> 
+{0 (6 12 18 24 30), 1 (6 12 18 24 30), 2 (6 12 18 24 30), 3 (6 12 18 24 30)}
+clj꞉hello-repl꞉> 
+{0 (6 12 18 24 30), 1 (6 12 18 24 30), 2 (6 12 18 24 30), 3 (6 12 18 24 30)}
+clj꞉hello-repl꞉> 
+{0 (6 12 18 24 30), 1 (6 12 18 24 30), 2 (6 12 18 24 30), 3 (6 12 18 24 30)}
+clj꞉hello-repl꞉> 
+{0 (6 12 18 24 30), 1 (6 12 18 24 30), 2 (6 12 18 24 30), 3 (6 12 18 24 30)}
+clj꞉hello-repl꞉> 
+{0 (6 12 18 24 30), 1 (6 12 18 24 30), 2 (6 12 18 24 30), 3 (6 12 18 24 30)}
+clj꞉hello-repl꞉> 
+(0 1 2 3)
+clj꞉hello-repl꞉> 
+; Execution error (ArityException) at hello-repl/eval7770 (REPL:7).
+; Wrong number of args (1) passed to: clojure.core/zipmap
+clj꞉hello-repl꞉> 
+; Syntax error compiling at (c:\Users\Fohr\AppData\Local\Temp\betterthantomorrow.calva\94svjo\hello_repl.clj:5:8).
+; Unable to resolve symbol: s in this context
+clj꞉hello-repl꞉> 
+{0 (6 12 18 24 30), 1 (6 12 18 24 30), 2 (6 12 18 24 30), 3 (6 12 18 24 30)}
+clj꞉hello-repl꞉> 
+6
+clj꞉hello-repl꞉> 
+#function[clojure.core/partial/fn--5908]
+clj꞉hello-repl꞉> 
+{0 (6 12 18 24 30), 1 (6 12 18 24 30), 2 (6 12 18 24 30), 3 (6 12 18 24 30)}
+clj꞉hello-repl꞉> 
+#function[clojure.core/partial/fn--5908]
+clj꞉hello-repl꞉> 
+#function[clojure.core/map/fn--5931]
+clj꞉hello-repl꞉> 
+(4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 ...)
+clj꞉hello-repl꞉> 
+{0 (6 12 18 24 30), 1 (6 12 18 24 30), 2 (6 12 18 24 30), 3 (6 12 18 24 30)}
+clj꞉hello-repl꞉> 
+((6 12 18 24 30) (6 12 18 24 30) (6 12 18 24 30) (6 12 18 24 30))
+clj꞉hello-repl꞉> 
+4
+clj꞉hello-repl꞉> 
+{0 (6 12 18 24 30), 1 (6 12 18 24 30), 2 (6 12 18 24 30), 3 (6 12 18 24 30)}
+clj꞉hello-repl꞉> 
+{0 (6 12 18 24 30), 1 (6 12 18 24 30), 2 (6 12 18 24 30), 3 (6 12 18 24 30)}
+clj꞉hello-repl꞉> 
+{0 (6 12 18 24 30), 1 (6 12 18 24 30), 2 (6 12 18 24 30), 3 (6 12 18 24 30)}
+clj꞉hello-repl꞉> 
+; Execution error (ArityException) at hello-repl/eval7797 (REPL:7).
+; Wrong number of args (1) passed to: clojure.core/zipmap
+clj꞉hello-repl꞉> 
+(4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 ...)
+clj꞉hello-repl꞉> 
+#function[clojure.core/map/fn--5931]
+clj꞉hello-repl꞉> 

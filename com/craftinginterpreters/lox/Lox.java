@@ -9,7 +9,9 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class Lox {
+    private static final Interpreter interpreter = new Interpreter();
     static boolean hadError = false;
+    static boolean hadRuntimeError = false;
 
     // I suspect args means text symbols. So this args > 1 means it's dealing with a token.
     // If it finds a token, it prints "Usage: jlox []"?
@@ -31,7 +33,9 @@ public class Lox {
         run(new String(bytes, Charset.defaultCharset()));
         // "Indicate an error in the exit code."
         if (hadError) System.exit(65);
+        if (hadRuntimeError) System.exit(70);
     }
+
     // This part seems like it's just linking things. Telling the Readers what to read from.
     private static void runPrompt() throws IOException {
         InputStreamReader input = new InputStreamReader(System.in);
@@ -57,12 +61,18 @@ public class Lox {
         if (hadError) return;
 
         // for now, just returns to us the parsed syntax.
-        System.out.println(new AstPrinter().print(expression));
+        interpreter.interpret(expression);
     }
 
     // The book says this part tells us which line errors occurred on.
     static void error(int line, String message) {
         report(line, "", message);
+    }
+
+    static void runtimeError(RuntimeError error) {
+        System.err.println(error.getMessage() +
+            "\n[line " + error.token.line + "]");
+        hadRuntimeError = true;
     }
 
     private static void report(int line, String where,
