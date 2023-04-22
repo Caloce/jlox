@@ -24,7 +24,8 @@ public class Lox {
         } else if (args.length == 1) {
           runFile(args[0]);
         } else {
-        runPrompt();
+        //runPrompt();
+        runFile("test.lox");
         }
     }
 
