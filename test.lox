@@ -1,8 +1,13 @@
-{
+fun makeCounter() {
   var i = 0;
-  while (i < 10) {
-    print i;
+  fun count() {
     i = i + 1;
-    if (i > 3) break;
+    print i;
   }
+
+  return count;
 }
+
+var counter = makeCounter();
+counter(); // "1".
+counter(); // "2".
