@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Stack;
 
-class Resolver implements Expr.Visitor<Void>. Stmt.Visitor<Void> {
+class Resolver implements Expr.Visitor<Void>, Stmt.Visitor<Void> {
   private final Interpreter interpreter;
   private final Stack<Map<String, Boolean>> scopes = new Stack<>();
   private FunctionType currentFunction = FunctionType.NONE;
@@ -19,7 +19,7 @@ class Resolver implements Expr.Visitor<Void>. Stmt.Visitor<Void> {
     FUNCTION
   }
 
-  void resolve (list<Stmt> statements) {
+  void resolve (List<Stmt> statements) {
     for (Stmt statement : statements) {
       resolve(statement);
     }
@@ -66,9 +66,9 @@ class Resolver implements Expr.Visitor<Void>. Stmt.Visitor<Void> {
   @Override
   public Void visitReturnStmt(Stmt.Return stmt) {
     if (currentFunction == FunctionType.NONE) {
-      Lox.error(stmt.keyword, "Can't return from top-level clode.");
+      Lox.error(stmt.keyword, "Can't return from top-level code.");
     }
-    
+
     if (stmt.value != null) {
       resolve(stmt.value);
     }
@@ -108,13 +108,19 @@ class Resolver implements Expr.Visitor<Void>. Stmt.Visitor<Void> {
   }
 
   @Override
-  public Void visiCallExpr(Expr.Call expr) {
+  public Void visitCallExpr(Expr.Call expr) {
     resolve(expr.callee);
 
     for (Expr argument : expr.arguments) {
       resolve(argument);
     }
 
+    return null;
+  }
+
+  @Override
+  public Void visitGroupingExpr(Expr.Grouping expr) {
+    resolve(expr.expression);
     return null;
   }
 
@@ -162,7 +168,7 @@ class Resolver implements Expr.Visitor<Void>. Stmt.Visitor<Void> {
     currentFunction = type;
 
     beginScope();
-    for (Token param : funcitons.params) {
+    for (Token param : function.params) {
       declare(param);
       define(param);
     }
@@ -180,7 +186,7 @@ class Resolver implements Expr.Visitor<Void>. Stmt.Visitor<Void> {
   }
 
   private void declare(Token name) {
-    if(scope.isEmpty()) return;
+    if(scopes.isEmpty()) return;
 
     Map<String, Boolean> scope = scopes.peek();
     if (scope.containsKey(name.lexeme)) {

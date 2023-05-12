@@ -50,6 +50,8 @@ class Environment {
     for (int i = 0; i < distance; i++) {
       environment = environment.enclosing;
     }
+
+    return environment;
   }
 
   Object getAt(int distance, String name) {

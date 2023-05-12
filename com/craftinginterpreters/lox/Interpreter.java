@@ -163,7 +163,7 @@ class Interpreter implements Expr.Visitor<Object>,
     if (distance != null) {
       return environment.getAt(distance, name.lexeme);
     } else {
-      return global.get(name);
+      return globals.get(name);
     }
   }
 
