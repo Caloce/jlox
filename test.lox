@@ -1,5 +1,9 @@
-var a = 1;
-while (a < 10) {
-  print a;
-  a = a + 1;
+fun addPair(a, b) {
+  return a + b;
 }
+
+fun identity(a) {
+  return a;
+}
+
+print identity(addPair)(1, 2); // Prints "3".

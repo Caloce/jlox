@@ -51,7 +51,7 @@ class Parser {
 
     Expr.Variable superclass = null;
     if (match(LESS)) {
-      consume(IDENTIFIER, "expect superclass name.");
+      consume(IDENTIFIER, "Expect superclass name.");
       superclass = new Expr.Variable(previous());
     }
     consume(LEFT_BRACE, "Expect '{' before class body.");
@@ -179,7 +179,7 @@ class Parser {
 
   private Stmt expressionStatement() {
     Expr expr = expression();
-    consume(SEMICOLON, "expect ';' after expression.");
+    consume(SEMICOLON, "Expect ';' after expression.");
     return new Stmt.Expression(expr);
   }
 
